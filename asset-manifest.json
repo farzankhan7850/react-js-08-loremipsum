@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-js-08-loremipsum/static/css/main.4ac94dca.css",
+    "main.js": "/react-js-08-loremipsum/static/js/main.05a268d5.js",
+    "index.html": "/react-js-08-loremipsum/index.html",
+    "main.4ac94dca.css.map": "/react-js-08-loremipsum/static/css/main.4ac94dca.css.map",
+    "main.05a268d5.js.map": "/react-js-08-loremipsum/static/js/main.05a268d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4ac94dca.css",
+    "static/js/main.05a268d5.js"
+  ]
+}
