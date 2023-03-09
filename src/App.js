@@ -1,20 +1,15 @@
 import React, { useState } from "react";
-import data from "./data.js";
+import data from "./data";
 import "./index.css";
 
-export default function App() {
+function App() {
   const [count, setCount] = useState(0);
   const [text, setText] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let amount = parseInt(count);
-    if (count <= 0) setText(data.slice(0, amount));
+    setText(data.slice(0, count));
   };
-
-  // function handleChange(e) {
-  //   setCount(e.target.value);
-  // }
 
   return (
     <section className="section-center">
@@ -23,7 +18,6 @@ export default function App() {
         <label htmlFor="amount">paragraphs:</label>
         <input
           type="number"
-          name="amount"
           id="amount"
           value={count}
           onChange={(e) => setCount(e.target.value)}
@@ -33,10 +27,12 @@ export default function App() {
         </button>
       </form>
       <article className="lorem-text">
-        {text.map((e) => {
-          return <p>{e}</p>;
+        {text.map((e, index) => {
+          return <p key={index}>{e}</p>;
         })}
       </article>
     </section>
   );
 }
+
+export default App;
